@@ -1,0 +1,50 @@
+---
+layout: default
+---
+<div class="home">
+  <div class="call-out"
+  style="background-image: url('{{ site.baseurl }}/{{ site.theme_settings.header_text_feature_image }}')">
+    <h2>{{ page.tag }}<h2>
+  </div>
+</div>
+
+<div class="posts">
+  {% for post in page.posts %}
+  <div class="post-teaser">
+    <header>
+      <h1>
+        {% if post.external_url %}
+          {% if post.image %}
+            <img class="post-image" style="background-image: url('{{ site.baseurl }}/{{ post.image }}')" alt=""/>
+          {% endif %}
+          <a class="post-link" href="{{ post.external_url }}">
+            {{ post.title }}
+          </a>
+        {% else %}
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+            {{ post.title }}
+          </a>
+        {% endif %}
+
+      </h1>
+      <p class="meta">
+        {{ post.date | date: "%B %-d, %Y" }}
+      </p>
+    </header>
+    <div class="excerpt">
+      {{ post.excerpt }}
+
+      {% if post.external_url %}
+        <a class="button" href="{{ post.external_url }}">
+        {{ site.theme_settings.str_continue_reading }}
+        </a>
+      {% else %}
+        <a class="button" href="{{ post.url | prepend: site.baseurl }}">
+        {{ site.theme_settings.str_continue_reading }}
+        </a>
+      {% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
