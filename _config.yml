@@ -71,11 +71,18 @@ sass:
 gems: [jekyll-paginate, jekyll/tagging]
 
 # CATEGORIES
-categories:
-  - title: 생산현황
-    header_text: 생산현황 관련 모음입니다.
-  - title: 생산효율
-    header_text: 생산효율 관련 모음입니다.
+collections:
+  my_categories:
+    output: true
+    permalink: /category/:name/
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: my_categories
+    values:
+      layout: blog_by_category
 
 tag_page_layout: tag_page
 tag_page_dir: tag

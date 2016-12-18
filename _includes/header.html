@@ -15,7 +15,7 @@
 	</div>
 	<nav class="site-nav">
 		<ul>
-			{% for page in site.pages %}
+<!-- 			{% for page in site.pages %}
 			{% if page.title and page.hide != true %}
 			<li>
 				<a class="page-link" href="{{ page.url | prepend: site.baseurl }}">
@@ -23,19 +23,19 @@
 				</a>
 			</li>
 			{% endif %}
-			{% endfor %}
+			{% endfor %} -->
 
 			<li>
-				<a class="page-link" href="{{ '/tag/생산현황' | prepend: site.baseurl }}">생산현황</a>
+				<a class="page-link" href="{{ '/category/생산현황' | prepend: site.baseurl }}">1. 생산현황</a>
 			</li>
 			<li>
-				<a class="page-link" href="{{ '/tag/생산효율' | prepend: site.baseurl }}">생산효율</a>
+				<a class="page-link" href="{{ '/category/생산효율' | prepend: site.baseurl }}">2. 생산효율</a>
 			</li>
 			<li>
-				<a class="page-link" href="{{ '/tag/생산진도' | prepend: site.baseurl }}">생산진도</a>
+				<a class="page-link" href="{{ '/category/생산진도' | prepend: site.baseurl }}">3. 생산진도</a>
 			</li>
 			<li>
-				<a class="page-link" href="{{ '/tag/제조혁신' | prepend: site.baseurl }}">제조혁신</a>
+				<a class="page-link" href="{{ '/category/제조혁신' | prepend: site.baseurl }}">4. 제조혁신</a>
 			</li>
 			<!-- Social icons from Font Awesome, if enabled -->
 			<!-- {% include icons.html %} -->
