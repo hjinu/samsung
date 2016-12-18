@@ -41,6 +41,15 @@
 
 	ga('create', '{{ site.theme_settings.google_analytics }}', 'auto');
 	ga('send', 'pageview');
+
+	function view(action){
+		ga('send', {
+		  hitType: 'event',
+		  eventCategory: 'View',
+		  eventAction: action
+		});
+	}
+
 	</script>
 	{% endif %}
 </head>

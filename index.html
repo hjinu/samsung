@@ -19,7 +19,7 @@ layout: default
             {% if post.image %}
               <img class="post-image" style="background-image: url('{{ site.baseurl }}/{{ post.image }}')" alt=""/>
             {% endif %}
-            <a class="post-link" href="{{ post.external_url }}">
+            <a class="post-link" onclick="alert('as')" href="{{ post.external_url }}">
               {{ post.title }}
             </a>
           {% else %}
